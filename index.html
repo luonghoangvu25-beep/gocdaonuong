@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Góc Đảo Nướng</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Be Vietnam Pro',sans-serif;
+background:#050505;
+color:white;
+
+}
+
+body::before{
+
+content:"";
+position:fixed;
+inset:0;
+background:url('https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=1200&q=80');
+background-size:cover;
+background-position:center;
+opacity:.08;
+z-index:-2;
+
+}
+
+body::after{
+
+content:"";
+position:fixed;
+inset:0;
+background:linear-gradient(to bottom,#000,#070707,#000);
+z-index:-1;
+
+}
+
+.hero{
+
+padding:30px 20px;
+text-align:center;
+
+}
+
+.logo{
+
+width:170px;
+height:170px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #ff9800;
+box-shadow:
+0 0 35px rgba(255,136,0,.55),
+0 0 70px rgba(255,80,0,.25);
+
+}
+
+.title{
+
+font-size:42px;
+font-weight:800;
+margin-top:20px;
+color:#ffb11a;
+text-shadow:0 0 18px rgba(255,153,0,.55);
+
+}
+
+.address{
+
+margin-top:12px;
+font-size:18px;
+color:#eee;
+
+}
+
+.buttons{
+
+margin-top:30px;
+
+}
+
+.btn{
+
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+text-decoration:none;
+padding:17px;
+margin:14px auto;
+width:100%;
+max-width:650px;
+border-radius:16px;
+font-weight:700;
+font-size:18px;
+transition:.25s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-2px);
+
+}
+
+.call{
+
+background:linear-gradient(90deg,#ff8a00,#ff5c00);
+color:white;
+
+}
+
+.zalo{
+
+background:linear-gradient(90deg,#005dff,#002db7);
+color:white;
+
+}
+
+.fb{
+
+background:linear-gradient(90deg,#1d4ed8,#312e81);
+color:white;
+
+}
+
+.card{
+
+width:min(94%,750px);
+margin:25px auto;
+padding:22px;
+border-radius:22px;
+background:rgba(15,15,15,.82);
+border:1px solid rgba(255,145,0,.25);
+backdrop-filter:blur(6px);
+
+}
+
+.card h2{
+
+color:#ffb11a;
+margin-bottom:18px;
+font-size:28px;
+
+}
+
+.item{
+
+display:flex;
+justify-content:space-between;
+padding:13px 0;
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.item:last-child{
+
+border:none;
+
+}
+
+.price{
+
+color:#ffb11a;
+font-weight:700;
+
+}
+
+.grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:18px;
+
+}
+
+.info{
+
+line-height:1.9;
+font-size:17px;
+
+}
+
+.map iframe{
+
+width:100%;
+height:230px;
+border:none;
+border-radius:15px;
+
+}
+
+.map-btn{
+
+display:block;
+text-align:center;
+margin-top:15px;
+padding:14px;
+border-radius:14px;
+background:linear-gradient(90deg,#ff8a00,#ff5c00);
+color:white;
+text-decoration:none;
+font-weight:700;
+
+}
+
+.footer{
+
+text-align:center;
+padding:45px 20px;
+
+}
+
+.footer h3{
+
+font-family:'Pacifico',cursive;
+color:#ffb11a;
+font-size:32px;
+
+}
+
+.features{
+
+margin-top:25px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+max-width:600px;
+margin-inline:auto;
+
+}
+
+.feature{
+
+padding:15px;
+border-radius:18px;
+background:rgba(255,145,0,.08);
+
+}
+
+.feature span{
+
+display:block;
+font-size:34px;
+margin-bottom:8px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<img src="logo.png" class="logo" alt="Góc Đảo Nướng">
+
+<div class="title">Góc Đảo Nướng</div>
+
+<div class="address">
+📍 56 Nguyễn Thông • Xóm Cội
+</div>
+
+<div class="buttons">
+
+<a class="btn call" href="tel:0915879803">
+📞 GỌI NGAY: 0915 879 803
+</a>
+
+<a class="btn zalo" href="https://zalo.me/0915879803">
+💙 ĐẶT BÀN QUA ZALO
+</a>
+
+<a class="btn fb" href="https://www.facebook.com/share/1FMyttS2Uj/">
+💬 ĐẶT BÀN QUA FACEBOOK
+</a>
+
+</div>
+
+</section>
+
+<div class="card">
+
+<h2>🔥 Menu nổi bật</h2>
+
+<div class="item"><span>Hàu nướng phô mai</span><span class="price">7.000đ</span></div>
+<div class="item"><span>Hàu nướng mỡ hành</span><span class="price">6.000đ</span></div>
+<div class="item"><span>Hàu hấp sả</span><span class="price">50.000đ/kg</span></div>
+<div class="item"><span>Cháo hàu</span><span class="price">25.000đ</span></div>
+<div class="item"><span>Cánh gà nướng</span><span class="price">20.000đ</span></div>
+<div class="item"><span>Chân gà nướng</span><span class="price">15.000đ</span></div>
+<div class="item"><span>Mề gà nướng</span><span class="price">10.000đ</span></div>
+<div class="item"><span>Cút nướng</span><span class="price">15.000đ</span></div>
+<div class="item"><span>Tôm nướng sa tế</span><span class="price">60.000đ</span></div>
+
+</div>
+
+<div class="card">
+
+<div class="grid">
+
+<div class="info">
+
+<h2>ℹ️ Thông tin</h2>
+
+📍 56 Nguyễn Thông
+
+Xóm Cội
+
+☎ 0915 879 803
+
+🍺 Bia + Nước ngọt các loại
+
+</div>
+
+<div class="map">
+
+<h2>🗺️ Chỉ đường</h2>
+
+<iframe src="https://www.google.com/maps?q=56+Nguyễn+Thông,+Phú+Yên&output=embed"></iframe>
+
+<a class="map-btn" href="https://maps.google.com/?q=56+Nguyễn+Thông,+Phú+Yên">
+📍 MỞ GOOGLE MAPS
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<footer class="footer">
+
+<h3>Cảm ơn bạn đã ghé Góc Đảo Nướng!</h3>
+
+<div class="features">
+
+<div class="feature">
+<span>🍺</span>
+Bia lạnh
+</div>
+
+<div class="feature">
+<span>🔥</span>
+Đồ nướng thơm ngon
+</div>
+
+<div class="feature">
+<span>🤝</span>
+Phục vụ nhiệt tình
+</div>
+
+<div class="feature">
+<span>🛡️</span>
+Vệ sinh an toàn
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
