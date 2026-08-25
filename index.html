@@ -1,380 +1,556 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Góc Đảo Nướng</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
-
-body{
-
-font-family:'Be Vietnam Pro',sans-serif;
-background:#050505;
-color:white;
-
-}
-
-body::before{
-
-content:"";
-position:fixed;
-inset:0;
-background:url('https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=1200&q=80');
-background-size:cover;
-background-position:center;
-opacity:.08;
-z-index:-2;
-
-}
-
-body::after{
-
-content:"";
-position:fixed;
-inset:0;
-background:linear-gradient(to bottom,#000,#070707,#000);
-z-index:-1;
-
-}
-
-.hero{
-
-padding:30px 20px;
-text-align:center;
-
-}
-
-.logo{
-
-width:170px;
-height:170px;
-border-radius:50%;
-object-fit:cover;
-border:5px solid #ff9800;
-box-shadow:
-0 0 35px rgba(255,136,0,.55),
-0 0 70px rgba(255,80,0,.25);
-
-}
-
-.title{
-
-font-size:42px;
-font-weight:800;
-margin-top:20px;
-color:#ffb11a;
-text-shadow:0 0 18px rgba(255,153,0,.55);
-
-}
-
-.address{
-
-margin-top:12px;
-font-size:18px;
-color:#eee;
-
-}
-
-.buttons{
-
-margin-top:30px;
-
-}
-
-.btn{
-
-display:flex;
-align-items:center;
-justify-content:center;
-gap:10px;
-text-decoration:none;
-padding:17px;
-margin:14px auto;
-width:100%;
-max-width:650px;
-border-radius:16px;
-font-weight:700;
-font-size:18px;
-transition:.25s;
-
-}
-
-.btn:hover{
-
-transform:translateY(-2px);
-
-}
-
-.call{
-
-background:linear-gradient(90deg,#ff8a00,#ff5c00);
-color:white;
-
-}
-
-.zalo{
-
-background:linear-gradient(90deg,#005dff,#002db7);
-color:white;
-
-}
-
-.fb{
-
-background:linear-gradient(90deg,#1d4ed8,#312e81);
-color:white;
-
-}
-
-.card{
-
-width:min(94%,750px);
-margin:25px auto;
-padding:22px;
-border-radius:22px;
-background:rgba(15,15,15,.82);
-border:1px solid rgba(255,145,0,.25);
-backdrop-filter:blur(6px);
-
-}
-
-.card h2{
-
-color:#ffb11a;
-margin-bottom:18px;
-font-size:28px;
-
-}
-
-.item{
-
-display:flex;
-justify-content:space-between;
-padding:13px 0;
-border-bottom:1px solid rgba(255,255,255,.08);
-
-}
-
-.item:last-child{
-
-border:none;
-
-}
-
-.price{
-
-color:#ffb11a;
-font-weight:700;
-
-}
-
-.grid{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:18px;
-
-}
-
-.info{
-
-line-height:1.9;
-font-size:17px;
-
-}
-
-.map iframe{
-
-width:100%;
-height:230px;
-border:none;
-border-radius:15px;
-
-}
-
-.map-btn{
-
-display:block;
-text-align:center;
-margin-top:15px;
-padding:14px;
-border-radius:14px;
-background:linear-gradient(90deg,#ff8a00,#ff5c00);
-color:white;
-text-decoration:none;
-font-weight:700;
-
-}
-
-.footer{
-
-text-align:center;
-padding:45px 20px;
-
-}
-
-.footer h3{
-
-font-family:'Pacifico',cursive;
-color:#ffb11a;
-font-size:32px;
-
-}
-
-.features{
-
-margin-top:25px;
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:18px;
-max-width:600px;
-margin-inline:auto;
-
-}
-
-.feature{
-
-padding:15px;
-border-radius:18px;
-background:rgba(255,145,0,.08);
-
-}
-
-.feature span{
-
-display:block;
-font-size:34px;
-margin-bottom:8px;
-
-}
-
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Góc Đảo Nướng</title>
+  <meta
+    name="description"
+    content="Góc Đảo Nướng - 56 Nguyễn Thông, Xóm Cội. Hải sản nướng, món ngon và đặt bàn nhanh."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Be Vietnam Pro", Arial, sans-serif;
+      background:
+        radial-gradient(
+          circle at top,
+          rgba(255, 145, 0, 0.18),
+          transparent 360px
+        ),
+        #050505;
+      color: #ffffff;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(92%, 760px);
+      margin: 0 auto;
+      padding: 34px 0 60px;
+    }
+
+    /* =========================
+       LOGO
+    ========================== */
+
+    .logo-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 6px;
+      margin-bottom: 25px;
+    }
+
+    .logo-circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid #ff9800;
+      background: #111111;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      box-shadow:
+        0 0 15px rgba(255, 152, 0, 0.85),
+        0 0 35px rgba(255, 152, 0, 0.4);
+    }
+
+    .logo-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .logo-fallback {
+      display: none;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: 800;
+      font-size: 22px;
+      color: #ffab18;
+      padding: 14px;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 {
+      color: #ffa914;
+      font-size: clamp(38px, 10vw, 65px);
+      line-height: 1.1;
+      font-weight: 800;
+
+      text-shadow:
+        0 0 9px rgba(255, 165, 0, 0.3),
+        0 0 25px rgba(255, 145, 0, 0.22);
+
+      margin-bottom: 22px;
+    }
+
+    .address {
+      font-size: clamp(18px, 5vw, 28px);
+      line-height: 1.5;
+      color: #eeeeee;
+    }
+
+    .address span {
+      margin-right: 7px;
+    }
+
+    /* =========================
+       BUTTONS
+    ========================== */
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 35px;
+    }
+
+    .action-btn {
+      min-height: 92px;
+      width: 100%;
+      border-radius: 25px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 18px 22px;
+
+      font-size: clamp(18px, 5vw, 29px);
+      font-weight: 800;
+      text-align: center;
+
+      transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .action-btn:active {
+      transform: scale(0.98);
+    }
+
+    .action-btn:hover {
+      filter: brightness(1.08);
+    }
+
+    .phone-btn {
+      background: linear-gradient(
+        100deg,
+        #ff9400,
+        #ff5700
+      );
+    }
+
+    .zalo-btn {
+      background: linear-gradient(
+        100deg,
+        #0868ff,
+        #1137bf
+      );
+    }
+
+    .facebook-btn {
+      background: linear-gradient(
+        100deg,
+        #1557e8,
+        #43369c
+      );
+    }
+
+    .btn-icon {
+      margin-right: 12px;
+      font-size: 1.15em;
+    }
+
+    /* =========================
+       SECTION
+    ========================== */
+
+    .section {
+      margin-top: 70px;
+      background: rgba(15, 15, 15, 0.94);
+      border: 1px solid rgba(255, 153, 0, 0.35);
+      border-radius: 35px;
+      padding: 38px 28px;
+
+      box-shadow:
+        0 14px 50px rgba(0,0,0,0.35),
+        inset 0 0 25px rgba(255, 145, 0, 0.025);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: clamp(29px, 8vw, 47px);
+      font-weight: 800;
+      color: #ffae1a;
+      margin-bottom: 30px;
+    }
+
+    /* =========================
+       MENU
+    ========================== */
+
+    .menu-list {
+      width: 100%;
+    }
+
+    .menu-item {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 15px;
+
+      padding: 25px 0;
+      border-bottom: 1px solid #262626;
+    }
+
+    .menu-item:last-child {
+      border-bottom: none;
+    }
+
+    .menu-name {
+      color: #f4f4f4;
+      font-size: clamp(18px, 4.8vw, 27px);
+      line-height: 1.4;
+    }
+
+    .menu-price {
+      color: #ffae18;
+      font-weight: 800;
+      font-size: clamp(18px, 4.8vw, 27px);
+      white-space: nowrap;
+    }
+
+    /* =========================
+       INFORMATION
+    ========================== */
+
+    .info-box {
+      text-align: center;
+      line-height: 1.8;
+      font-size: 18px;
+      color: #dddddd;
+    }
+
+    .info-box strong {
+      color: #ffad18;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 45px;
+      padding: 25px 10px;
+      color: #858585;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 520px) {
+      .container {
+        width: 90%;
+        padding-top: 27px;
+      }
+
+      .logo-circle {
+        width: 125px;
+        height: 125px;
+      }
+
+      .hero h1 {
+        margin-top: 5px;
+      }
+
+      .action-btn {
+        min-height: 80px;
+        border-radius: 21px;
+        padding: 15px;
+      }
+
+      .section {
+        margin-top: 58px;
+        padding: 30px 22px;
+        border-radius: 28px;
+      }
+
+      .menu-item {
+        padding: 22px 0;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<section class="hero">
+  <main class="container">
 
-<img src="logo.png" class="logo" alt="Góc Đảo Nướng">
+    <!-- =========================
+         LOGO
+         File ảnh cần tên: logo.jpg
+    ========================== -->
 
-<div class="title">Góc Đảo Nướng</div>
+    <div class="logo-wrapper">
+      <div class="logo-circle">
 
-<div class="address">
-📍 56 Nguyễn Thông • Xóm Cội
-</div>
+        <img
+          src="logo.jpg"
+          alt="Logo Góc Đảo Nướng"
+          onerror="
+            this.style.display='none';
+            document.getElementById('logoFallback').style.display='flex';
+          "
+        >
 
-<div class="buttons">
+        <div
+          class="logo-fallback"
+          id="logoFallback"
+        >
+          🔥<br>GÓC ĐẢO<br>NƯỚNG
+        </div>
 
-<a class="btn call" href="tel:0915879803">
-📞 GỌI NGAY: 0915 879 803
-</a>
+      </div>
+    </div>
 
-<a class="btn zalo" href="https://zalo.me/0915879803">
-💙 ĐẶT BÀN QUA ZALO
-</a>
 
-<a class="btn fb" href="https://www.facebook.com/share/1FMyttS2Uj/">
-💬 ĐẶT BÀN QUA FACEBOOK
-</a>
+    <!-- =========================
+         TÊN QUÁN
+    ========================== -->
 
-</div>
+    <section class="hero">
 
-</section>
+      <h1>Góc Đảo Nướng</h1>
 
-<div class="card">
+      <div class="address">
+        <span>📍</span>
+        56 Nguyễn Thông • Xóm Cội
+      </div>
 
-<h2>🔥 Menu nổi bật</h2>
+    </section>
 
-<div class="item"><span>Hàu nướng phô mai</span><span class="price">7.000đ</span></div>
-<div class="item"><span>Hàu nướng mỡ hành</span><span class="price">6.000đ</span></div>
-<div class="item"><span>Hàu hấp sả</span><span class="price">50.000đ/kg</span></div>
-<div class="item"><span>Cháo hàu</span><span class="price">25.000đ</span></div>
-<div class="item"><span>Cánh gà nướng</span><span class="price">20.000đ</span></div>
-<div class="item"><span>Chân gà nướng</span><span class="price">15.000đ</span></div>
-<div class="item"><span>Mề gà nướng</span><span class="price">10.000đ</span></div>
-<div class="item"><span>Cút nướng</span><span class="price">15.000đ</span></div>
-<div class="item"><span>Tôm nướng sa tế</span><span class="price">60.000đ</span></div>
 
-</div>
+    <!-- =========================
+         NÚT LIÊN HỆ
+    ========================== -->
 
-<div class="card">
+    <section class="actions">
 
-<div class="grid">
+      <!-- GỌI ĐIỆN -->
+      <a
+        class="action-btn phone-btn"
+        href="tel:0915879803"
+      >
+        <span class="btn-icon">📞</span>
+        GỌI NGAY: 0915 879 803
+      </a>
 
-<div class="info">
 
-<h2>ℹ️ Thông tin</h2>
+      <!-- ZALO -->
+      <a
+        class="action-btn zalo-btn"
+        href="https://zalo.me/0915879803"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="btn-icon">💙</span>
+        ĐẶT BÀN QUA ZALO
+      </a>
 
-📍 56 Nguyễn Thông
 
-Xóm Cội
+      <!-- FACEBOOK -->
+      <!--
+        Sau này bạn gửi link Facebook,
+        tôi sẽ thay link bên dưới cho bạn.
+      -->
 
-☎ 0915 879 803
+      <a
+        class="action-btn facebook-btn"
+        href="#"
+        onclick="
+          alert('Bạn hãy thêm đường dẫn Facebook của Góc Đảo Nướng vào mã.');
+          return false;
+        "
+      >
+        <span class="btn-icon">💬</span>
+        ĐẶT BÀN QUA FACEBOOK
+      </a>
 
-🍺 Bia + Nước ngọt các loại
+    </section>
 
-</div>
 
-<div class="map">
+    <!-- =========================
+         MENU
+    ========================== -->
 
-<h2>🗺️ Chỉ đường</h2>
+    <section class="section">
 
-<iframe src="https://www.google.com/maps?q=56+Nguyễn+Thông,+Phú+Yên&output=embed"></iframe>
+      <h2 class="section-title">
+        🔥 Menu nổi bật
+      </h2>
 
-<a class="map-btn" href="https://maps.google.com/?q=56+Nguyễn+Thông,+Phú+Yên">
-📍 MỞ GOOGLE MAPS
-</a>
+      <div class="menu-list">
 
-</div>
 
-</div>
+        <div class="menu-item">
+          <div class="menu-name">
+            Hàu nướng phô mai
+          </div>
 
-</div>
+          <div class="menu-price">
+            7.000đ
+          </div>
+        </div>
 
-<footer class="footer">
 
-<h3>Cảm ơn bạn đã ghé Góc Đảo Nướng!</h3>
+        <div class="menu-item">
+          <div class="menu-name">
+            Hàu nướng mỡ hành
+          </div>
 
-<div class="features">
+          <div class="menu-price">
+            6.000đ
+          </div>
+        </div>
 
-<div class="feature">
-<span>🍺</span>
-Bia lạnh
-</div>
 
-<div class="feature">
-<span>🔥</span>
-Đồ nướng thơm ngon
-</div>
+        <div class="menu-item">
+          <div class="menu-name">
+            Hàu hấp sả
+          </div>
 
-<div class="feature">
-<span>🤝</span>
-Phục vụ nhiệt tình
-</div>
+          <div class="menu-price">
+            50.000đ/kg
+          </div>
+        </div>
 
-<div class="feature">
-<span>🛡️</span>
-Vệ sinh an toàn
-</div>
 
-</div>
+        <div class="menu-item">
+          <div class="menu-name">
+            Cháo hàu
+          </div>
 
-</footer>
+          <div class="menu-price">
+            25.000đ
+          </div>
+        </div>
+
+
+        <div class="menu-item">
+          <div class="menu-name">
+            Sò nướng mỡ hành
+          </div>
+
+          <div class="menu-price">
+            Liên hệ
+          </div>
+        </div>
+
+
+        <div class="menu-item">
+          <div class="menu-name">
+            Hải sản nướng
+          </div>
+
+          <div class="menu-price">
+            Liên hệ
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         THÔNG TIN
+    ========================== -->
+
+    <section class="section">
+
+      <h2 class="section-title">
+        📍 Góc Đảo Nướng
+      </h2>
+
+      <div class="info-box">
+
+        <p>
+          <strong>Địa chỉ:</strong><br>
+          56 Nguyễn Thông • Xóm Cội
+        </p>
+
+        <br>
+
+        <p>
+          <strong>Điện thoại:</strong><br>
+          0915 879 803
+        </p>
+
+        <br>
+
+        <p>
+          🍺 Bia + Nước ngọt các loại
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+      © 2026 Góc Đảo Nướng<br>
+      56 Nguyễn Thông • Xóm Cội
+
+    </footer>
+
+  </main>
 
 </body>
 </html>
